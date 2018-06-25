@@ -8,13 +8,13 @@ from keras.layers import Conv2D, MaxPooling2D
 import pdb
 
 
-# def flat_to_one_hot(labels):
-# 	num_classes = np.unique(labels).shape[0]
-# 	num_labels = labels.shape[0]
-# 	index_offset = np.arange(num_labels) * num_classes
-# 	labels_one_hot = np.zeros((num_labels,num_classes))
-# 	labels_one_hot.flat[index_offset + labels.ravel()] = 1
-# 	return labels_one_hot
+def flat_to_one_hot(labels):
+	num_classes = np.unique(labels).shape[0]
+	num_labels = labels.shape[0]
+	index_offset = np.arange(num_labels) * num_classes
+	labels_one_hot = np.zeros((num_labels,num_classes))
+	labels_one_hot.flat[index_offset + labels.ravel()] = 1
+	return labels_one_hot
 
 def get_csv_traindata(valid_size=2000):
 
@@ -35,10 +35,10 @@ def get_csv_traindata(valid_size=2000):
 	train_labels = labels[valid_size:]
 
 	# Converting the images from flat to matrix form:
-	# train_imgs = train_imgs.reshape(train_imgs.shape[0],1,28,28)
-	# print(train_imgs.shape)
-	# validation_imgs = validation_imgs.reshape(validation_imgs.shape[0],1,28,28)
-	# print(validation_imgs.shape)
+	train_imgs = train_imgs.reshape(train_imgs.shape[0],1,28,28)
+	print(train_imgs.shape)
+	validation_imgs = validation_imgs.reshape(validation_imgs.shape[0],1,28,28)
+	print(validation_imgs.shape)
 	# Return the data:
 	return (train_imgs,train_labels),(validation_imgs,validation_labels)
 
