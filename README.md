@@ -36,3 +36,9 @@ The evaluation metric for this contest is the categorization accuracy, or the pr
 Once the model is trained then it is saved in the form of a json file along with its weights in the form of a .h5 file.
 -  After training, comes the testing of the model. For the testing the given file is test.csv. This file consists of 784 pixels without a description label. During the testing it is very important to recall the weights and the model created in the dr_train.py file. On processing of the test.csv, the predictions made are again saved into a separate csv file for evaluation. All the code for the testing can be found in dr_test.py file.
 -  For checking the correctness of the predictions, the given pixels in the datasets can be decoded into greyscale images of the handwritten digits. All the code for this step can found in train_dec.py file. But in this file the decoded images of the pixels are saved in folders according to the labels attached with them.
+
+### How to run
+-  Save all the files in the same folder
+-  Run the training file by giving the following command:  python3 dr_train.py
+-  After the training is complete, run the testing file:   python3 dr_test.py
+-  The model, weights and the solution file will be saved in the same folder.
