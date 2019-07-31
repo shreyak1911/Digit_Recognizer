@@ -39,6 +39,12 @@ Once the model is trained then it is saved in the form of a json file along with
 
 ### How to run
 -  Save all the files in the same folder
--  Run the training file by giving the following command:  python3 dr_train.py
--  After the training is complete, run the testing file:   python3 dr_test.py
+-  Run the training file by giving the following command:  
+'''bash
+python3 dr_train.py
+'''
+-  After the training is complete, run the testing file:
+'''bash
+python3 dr_test.py
+'''
 -  The model, weights and the solution file will be saved in the same folder.
